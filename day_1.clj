@@ -17,7 +17,9 @@
 
 
 ;; solution part 1,, the Elf carrying the most Calories
-(apply max-key max (parse input))
+(apply max (parse input))
+;; (apply max-key max (parse input))
 
+;; ------------------------------
 ;; solution part 2,, the top three Elves carrying the most Calories
 (apply + (take 3 (sort > (parse input))))
