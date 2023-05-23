@@ -4,11 +4,6 @@
 (def input (slurp "day_1_input.txt"))
 
 (defn parse [raw-input]
-  (->> (cstr/split raw-input #"\n\n") 
-       (map (comp (partial map read-string) 
-                  (partial cstr/split-lines)))))
-
-(defn parse [raw-input]
   (->> (cstr/split-lines raw-input)
        (partition-by empty?)
        (take-nth 2)
